@@ -17,11 +17,11 @@ while True:
         bateria_percent = bateria.percent
         if not bateria.power_plugged:
             print(f"O computador {id_unico} está usando bateria 🔋")
-            enviar_mensagem(f"O computador {id_unico} está usando bateria 🔋 - {bateria_percent}%", os.getenv("TELEFONE_NUMBER"))
+            enviar_mensagem(f"O computador | {id_unico} | está usando bateria 🔋 - {bateria_percent}%", os.getenv("TELEFONE_NUMBER"))
             while not bateria.power_plugged:
                 bateria = psutil.sensors_battery()
             print(f"O computador {id_unico} foi conectado à energia ⚡")
-            enviar_mensagem(f"O computador {id_unico} foi conectado à energia ⚡ - {bateria_percent}%", os.getenv("TELEFONE_NUMBER"))
+            enviar_mensagem(f"O computador | {id_unico} | foi conectado à energia ⚡ - {bateria_percent}%", os.getenv("TELEFONE_NUMBER"))
 
     else:
         print("Não foi possível detectar bateria")

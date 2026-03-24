@@ -16,7 +16,7 @@ while True:
     if bateria is not None:
         bateria_percent = bateria.percent
         if not bateria.power_plugged:
-            if bateria_percent < 101:
+            if bateria_percent < 30:
                 print(f"O computador {id_unico} está usando bateria 🔋")
                 enviar_mensagem(f"O computador | {id_unico} | está *ACABANDO* a bateria 🔋 - {bateria_percent}%, *VERIFIQUE URGENTEMENTE*", os.getenv("TELEFONE_NUMBER"))
             else:

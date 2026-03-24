@@ -2,9 +2,18 @@ import psutil
 from mensagem import enviar_mensagem
 import os
 import dotenv
+import socket
+import uuid
+
 
 dotenv.load_dotenv()
 
+import uuid
+import socket
+import platform
+
+id_unico = f"{uuid.getnode()}-{socket.gethostname()}-{platform.system()}"
+print(id_unico)
 while True:
     bateria = psutil.sensors_battery()
     if bateria is not None:

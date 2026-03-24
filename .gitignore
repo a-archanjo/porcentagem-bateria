@@ -3,6 +3,6 @@ Include
 Lib
 Scripts
 .env
-_pycache__
+__pycache__
 pyvenv.cfg
 
